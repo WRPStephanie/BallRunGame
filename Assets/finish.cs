@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class finish : MonoBehaviour
+{
+    private void Start()
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.transform.Find("Panel").gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.transform.Find("Panel").gameObject.SetActive(true);
+    }
+}
